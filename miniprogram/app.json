@@ -1,0 +1,17 @@
+{
+    "pages": ["pages/home/home", "pages/index/index", "pages/logs/logs"],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "",
+        "navigationBarTextStyle": "black"
+    },
+    "usingComponents": {
+        "icon": "./components/Icon/Icon",
+        "lazyImage": "./components/LazyImage/LazyImage"
+    },
+    "renderer": "webview",
+    "lazyCodeLoading": "requiredComponents",
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "We": "../../components/We/We",
+        "MemorialDay": "../../components/MemorialDay/MemorialDay",
+        "Photo": "../../components/Photo/Photo"
+    }
+}

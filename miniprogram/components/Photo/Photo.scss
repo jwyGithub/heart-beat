@@ -1,0 +1,48 @@
+@import "../../app.scss";
+.photos {
+    @include fullPage;
+    box-sizing: border-box;
+    padding: 30rpx;
+    overflow: auto;
+    .grid-box {
+        border-radius: 8px;
+        background-color: rgba(255, 255, 255, 0.5);
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .grid-box image {
+        width: 100%;
+    }
+
+    .content-box {
+        padding: 0px 10px 8px;
+    }
+
+    .profile-text {
+        display: flex;
+        flex-direction: row;
+        padding-top: 4px;
+        /* justify-content: center; */
+        align-items: center;
+    }
+
+    .profile-text view {
+        display: flex;
+        color: #888;
+        font-size: 14px;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .left {
+        width: 100%;
+        font-size: 12px;
+    }
+    .left .icon {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        margin-right: 4px;
+    }
+}

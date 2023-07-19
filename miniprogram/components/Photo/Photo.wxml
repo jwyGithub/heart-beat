@@ -1,0 +1,18 @@
+<view class="photos">
+    <scroll-view type="custom" bindscrolltolower="bindscrolltolower" class="scroll-view">
+        <grid-view type="masonry" cross-axis-count="{{crossAxisCount}}" cross-axis-gap="{{crossAxisGap}}" main-axis-gap="{{mainAxisGap}}">
+            <view wx:for="{{list}}" class="grid-box" wx:key="index" data-index="{{index}}">
+                <lazyImage actual-image="{{item.show ? item.src : item.def}}" mode="widthFix" class="{{item.show ? 'active': ''}}"></lazyImage>
+                <view class="content-box">
+                    <text style="font-size:12px">{{item.content}}</text>
+                    <view class="profile-text">
+                        <view class="left">
+                            <icon name="duolaAmeng"></icon>
+                            <text style="font-size: 12px;">{{item.date}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </grid-view>
+    </scroll-view>
+</view>

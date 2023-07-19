@@ -1,0 +1,7 @@
+<view class="we">
+    <view class="love-info">
+        <image src="../../assets/images/jwy.jpeg" mode="aspectFit" class="jwy" />
+        <image src="../../assets/images/heart-gif.gif" mode="aspectFit" class="connect" />
+        <image src="../../assets/images/jwy.jpeg" mode="aspectFit" class="yqn" />
+    </view>
+</view>

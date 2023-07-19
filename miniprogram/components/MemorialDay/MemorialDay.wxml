@@ -1,0 +1,14 @@
+<view class="memorial-day">
+
+
+    <view class="card-list">
+        <view class="card-item" wx:for="{{cards}}" wx:key="index">
+            <text class="item-title">
+                <icon name="duolaAmeng"></icon>{{item.title}}
+            </text>
+            <text class="item-value">{{item.value}}</text>
+        </view>
+    </view>
+
+
+</view>
