@@ -1,16 +1,16 @@
 @import "../../app.scss";
 
-
 .home {
-    @include fullPage;
+    @include fullScreen;
+    @include safeArea;
     @include flex();
+    background-image: linear-gradient(
+        to top,
+        rgba(#ecebef, 1) 0%,
+        rgba(255, 255, 255, 0.1) 100%
+    );
     flex-direction: column;
-
-    background: linear-gradient(rgba(#c5c6e4, 0.5), rgba(#00ace6, 0.5));
-    // background-image: url($img);
-    // background-repeat: no-repeat;
-    // background-attachment: fixed;
-    // background-size: cover;
+    overflow: hidden;
 
     .page-content {
         flex: 12;
@@ -44,46 +44,43 @@
     }
 
     .page-tabs {
-        flex: 1.2;
+        flex: 1.1;
         width: 100%;
-
+        position: relative;
         .page-tabs_container {
             @include flex(space-around);
             width: 96%;
             height: 90rpx;
-            margin: 0 auto;
             border-radius: 60rpx;
-            color: #fff;
-            position: relative;
-            background-color: rgba(255, 255, 255, 0.5);
+            font-weight: bold;
+            position: absolute;
+            background-color: #fff;
             overflow: hidden;
             z-index: 10;
-
-            &::before {
-                content: "";
-                position: absolute;
-                top: -100px;
-                left: -100px;
-                right: -100px;
-                bottom: -100px;
-                // background-image: url($img);
-                // background-repeat: no-repeat;
-                // background-attachment: fixed;
-                // background-size: cover;
-                filter: blur(10px);
-                z-index: -1;
-            }
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
 
             .page-tab {
                 @include flex;
                 height: 100%;
-                &_text {
-                    font-size: 30rpx;
-                    margin-left: 20rpx;
+                &-item {
+                    &-icon {
+                        width: 70rpx;
+                        transition: width 0.1s linear;
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
                 }
-
                 &.active {
-                    color: rgb(74, 194, 202);
+                    .page-tab-item {
+                        border: 1px solid #f6e5e8;
+                        border-radius: 50%;
+                        .page-tab-item-icon {
+                            width: 80rpx;
+                            height: 80rpx;
+                        }
+                    }
                 }
             }
         }

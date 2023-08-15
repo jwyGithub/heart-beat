@@ -1,0 +1,5 @@
+{
+    "usingComponents": {
+        "journey-item": "./components/JourneyItem/JourneyItem"
+    }
+}

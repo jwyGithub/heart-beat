@@ -1,0 +1,33 @@
+@import "../../../../app.scss";
+
+.journey-item {
+    @include flex;
+    --left: 8%;
+    height: 200rpx;
+    width: 100%;
+    position: relative;
+    &-cover {
+        border-radius: 20rpx;
+    }
+    &-text {
+        position: absolute;
+        color: #fff;
+        left: var(--left);
+        font-weight: 700;
+        font-size: 48rpx;
+        top: 30%;
+        @include fontNormal;
+        text-align-last: justify;
+    }
+
+    &-date {
+        position: absolute;
+        left: var(--left);
+        top: 60%;
+        font-size: 30rpx;
+        -webkit-text-stroke: 1px #fff;
+        -webkit-text-fill-color: transparent;
+        border-radius: 5rpx;
+        color: #fff;
+    }
+}

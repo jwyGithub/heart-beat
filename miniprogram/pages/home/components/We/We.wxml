@@ -1,0 +1,83 @@
+<view class="we">
+    <view class="we-content"> </view>
+
+    <view class="we-footer">
+        <view class="we-footer-record">
+            <view class="we-footer-record-left">
+                <image
+                    src="https://xui.vpsdomain.tk:20228/heartBeat/images/we_image_jwy.jpg"
+                    mode="aspectFill"
+                    class="we-footer-record-left-people"
+                />
+                <icon name="aixin" size="25" color="#ff323d" class="we-footer-record-left-icon" />
+                <image
+                    src="https://xui.vpsdomain.tk:20228/heartBeat/images/we_image_yqn.jpg"
+                    mode="aspectFill"
+                    class="we-footer-record-left-people"
+                />
+            </view>
+            <view class="we-footer-record-right">
+                <view class="we-footer-record-right-days"> <text style="font-size: 28rpx">在一起</text> {{ be_together.day }}天 </view>
+                <view class="we-footer-record-right-date"> {{ be_together.hour }}时{{ be_together.min }}分{{ be_together.sec }}秒 </view>
+            </view>
+        </view>
+        <view class="we-footer-tools">
+            <view class="we-footer-tools-item" wx:for="{{ tools }}" wx:key="index" data-item="{{ item }}" bind:tap="onClickTool">
+                <view class="we-footer-tools-item_icon">
+                    <image src="{{ item.icon }}" mode="widthFix" style="width: 100%" />
+                </view>
+                <view class="we-footer-tools-item_text">
+                    {{ item.toolName }}
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- <Calendar /> -->
+    <!-- <view class="we-image">
+        <view class="we-image-left">
+            <image src="https://xui.vpsdomain.tk:20228/heartBeat/images/we_image_jwy.jpg" mode="aspectFill" class="item" />
+        </view>
+        <view class="we-image-right">
+            <image src="https://xui.vpsdomain.tk:20228/heartBeat/images/we_image_yqn.jpg" mode="widthFix" class="item" />
+        </view>
+    </view> -->
+
+    <!-- <view class="we-header">
+        <view class="we-header-label">在一起</view>
+        <view class="we-header-day">
+            <text class="we-header-day_tag">已经</text>
+            <text class="we-header-day_value">{{ be_together.day }}</text>
+            <text class="we-header-day_tag">天</text>
+            <text class="we-header-day_value">{{ be_together.hour }}</text>
+            <text class="we-header-day_tag">时</text>
+            <text class="we-header-day_value">{{ be_together.min }}</text>
+            <text class="we-header-day_tag">分</text>
+            <text class="we-header-day_value">{{ be_together.sec }}</text>
+            <text class="we-header-day_tag">秒</text>
+        </view>
+        <view class="we-header-date">
+            {{be_together_date}}
+        </view>
+    </view> -->
+
+    <!-- <view class="we-content">
+        <view
+            class="we-content-item"
+            wx:for="{{ list }}"
+            wx:key="index"
+            style="background-image: url('https://xui.vpsdomain.tk:20228/heartBeat/images/{{ item.bg }}');"
+        >
+            <view class="we-content-item-icon">
+                <icon name="{{ item.icon }}" size="38"></icon>
+            </view>
+            <view class="we-content-item-title">
+                <view class="title">{{ item.title }}</view>
+                <view class="date">{{ item.date }}</view>
+            </view>
+            <view class="we-content-item-date">
+                <view class="date">{{ item.diff }}</view>
+                <view class="tag">已经</view>
+            </view>
+        </view>
+    </view> -->
+</view>

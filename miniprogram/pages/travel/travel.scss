@@ -1,0 +1,63 @@
+@import '../../app.scss';
+
+.travel {
+    @include fullScreen;
+    @include safeArea;
+    position: fixed;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    --item-bottom: 50rpx;
+    --before-width: 20rpx;
+    --before-height: 20rpx;
+    --before-left: 20rpx;
+    --content-width: 86%;
+    --date-height: 40rpx;
+    &-item {
+        position: relative;
+        &::before {
+            position: absolute;
+            // content: '';
+            width: var(--before-width);
+            height: var(--before-height);
+            background-color: #000;
+            border-radius: 50%;
+            left: var(--before-left);
+            z-index: 10;
+            top: calc(calc(var(--date-height) / 2) - calc(var(--before-height) / 2));
+        }
+        &:not(:last-child) {
+            margin-bottom: var(--item-bottom);
+
+            &::after {
+                position: absolute;
+                content: '';
+                width: 2rpx;
+                z-index: 1;
+                height: calc(100% + var(--item-bottom));
+                background-image: linear-gradient(to bottom, orange, purple);
+                left: calc(var(--before-left) + calc(var(--before-width) / 2));
+                top: var(--before-height);
+            }
+        }
+
+        &-date {
+            width: var(--content-width);
+            margin: 0 auto;
+            margin-bottom: 20rpx;
+            @include fontNormal;
+            font-size: 38rpx;
+            background-image: linear-gradient(to right, orange, purple);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            line-height: var(--date-height);
+            padding-left: 40rpx;
+        }
+        &-content {
+            width: var(--content-width);
+            margin: 0 auto;
+            padding-left: 40rpx;
+        }
+    }
+}
+

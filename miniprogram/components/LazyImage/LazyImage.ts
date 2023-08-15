@@ -10,7 +10,7 @@ Component({
         // 默认图片
         defaulteImage: {
             type: String,
-            value: "../../assets/images/photo_loading.gif",
+            value: "https://xui.vpsdomain.tk:20228/heartBeat/images/photo_loading.gif",
         },
         // 实际展示图片
         actualImage: {

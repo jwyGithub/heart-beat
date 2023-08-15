@@ -1,0 +1,6 @@
+<view class="journey-item" data-coverImage="{{ coverImage }}">
+    <image src="{{ coverImage }}" mode="aspectFill" style="height: 100%; width: 100%" class="journey-item-cover" />
+
+    <text class="journey-item-text">{{ name }}</text>
+    <text class="journey-item-date">{{ date }}</text>
+</view>

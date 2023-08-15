@@ -1,0 +1,129 @@
+._calendar {
+    width: 95%;
+    margin: 20rpx auto 0;
+    box-shadow: 0px 0px 5px 4px #c3d1ec;
+    border-radius: 30rpx;
+    overflow: hidden;
+    background-color: #fff;
+    .calendar-header {
+        width: 100%;
+        height: 200rpx;
+        background-image: linear-gradient(to right, #7ca9ff, #fd94ff);
+        margin: 0 auto;
+        position: relative;
+        border-top-left-radius: 30rpx;
+        border-top-right-radius: 30rpx;
+        .top {
+            display: flex;
+            padding: 20rpx 0;
+            .top-left,
+            .top-right {
+                flex: 1;
+                color: #fff;
+            }
+
+            .top-left {
+                padding: 10rpx 0 0 40rpx;
+                .title {
+                    font-size: 2rem;
+                    color: #fff;
+                }
+            }
+            .top-right {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                padding-top: 35rpx;
+                .top-right-text {
+                    font-size: 0.6rem;
+                    color: #fff;
+                }
+                .wether {
+                    width: 25px;
+                    height: 25px;
+                    margin-left: 70rpx;
+                }
+            }
+        }
+        .bottom {
+            position: absolute;
+            width: 50%;
+            height: 1px;
+            background: #fff;
+            left: 40rpx;
+            bottom: 25rpx;
+        }
+    }
+    ._container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 20rpx 0;
+        box-sizing: border-box;
+        ._container-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-bottom: 10rpx;
+            ._left {
+                transform: rotate(180deg);
+            }
+            ._ponient {
+                width: 1.2rem;
+                height: 1.2rem;
+                display: block;
+            }
+        }
+
+        ._container-content {
+            box-sizing: border-box;
+            padding: 10rpx 20rpx;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            ._week {
+                width: 100%;
+                height: 10%;
+                display: flex;
+                align-items: center;
+                background-image: linear-gradient(to right, #7ca9ff, #fd94ff);
+                border-radius: 20rpx;
+                padding: 8rpx 0;
+                color: #fff;
+                font-size: 0.7rem;
+                ._week-header {
+                    width: calc(100% / 7);
+                    text-align: center;
+                }
+            }
+            ._days {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                ._day-text {
+                    width: calc(100% / 7);
+                    text-align: center;
+                    padding: 10rpx 0;
+                    box-sizing: border-box;
+                }
+                .active {
+                    background-color: #b99cff;
+                    border-radius: 30rpx;
+
+                    ._days-lunarday {
+                        color: #fff;
+                    }
+                }
+            }
+            ._days-date {
+                font-size: 0.8rem;
+                color: #000000;
+                font-weight: 500;
+            }
+            ._days-lunarday {
+                font-size: 0.5rem;
+                color: #c0c0c0;
+            }
+        }
+    }
+}

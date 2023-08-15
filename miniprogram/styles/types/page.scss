@@ -1,0 +1,21 @@
+// 全屏
+@mixin fullScreen() {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: fixed;
+}
+
+@mixin fullPage($w: 100%, $h: 100%) {
+    width: $w;
+    height: $h;
+}
+
+@mixin safeArea {
+    padding-top: constant(safe-area-inset-top); /*兼容 IOS<11.2*/
+    padding-top: env(safe-area-inset-top); /*兼容 IOS>11.2*/
+    padding-bottom: constant(safe-area-inset-bottom); /*兼容 IOS<11.2*/
+    padding-bottom: env(safe-area-inset-bottom); /*兼容 IOS>11.2*/
+}

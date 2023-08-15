@@ -1,0 +1,87 @@
+@import '../../../../app.scss';
+.we {
+    @include fullPage;
+    @include flex;
+    @include fontNormal;
+
+    flex-direction: column;
+    /** 内容区域  */
+    &-content {
+        width: 100%;
+        flex: 2.5;
+        background-image: url(#{$image_serve}we_bg_5.jpg);
+        background-size: cover;
+    }
+
+    &-footer {
+        width: 100%;
+        flex: 1;
+        position: relative;
+        &-record {
+            @include flex(center, flex-start);
+            position: absolute;
+            background-color: #fff;
+            width: 90%;
+            height: 200rpx;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            top: -100rpx;
+            border-radius: 30rpx;
+            padding: 0 10rpx;
+            box-sizing: border-box;
+
+            &-left {
+                @include flex;
+                height: 100%;
+                width: 57%;
+                padding: 0 10rpx;
+                box-sizing: border-box;
+                &-people {
+                    width: 120rpx;
+                    height: 120rpx;
+                    border-radius: 50%;
+                    border: 10rpx solid #f6e5e8;
+                }
+                &-icon {
+                    margin: 0 20rpx;
+                }
+            }
+
+            &-right {
+                width: 43%;
+                padding: 30rpx 0;
+                &-days {
+                    line-height: 90rpx;
+                    text-align: center;
+                    font-size: 50rpx;
+                    @include fontNormal;
+                }
+                &-date {
+                    width: 90%;
+                    margin: 0 auto;
+                    background-color: #f6e5e8;
+                    padding: 0 5rpx;
+                    text-align: center;
+                }
+            }
+        }
+
+        &-tools {
+            width: 90%;
+            margin: 100rpx auto 0;
+            height: calc(100% - 100rpx);
+            @include flex(space-between);
+            &-item {
+                background-color: #fff;
+                border-radius: 30rpx;
+                padding: 10rpx 40rpx;
+                &_icon {
+                    width: 120rpx;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+

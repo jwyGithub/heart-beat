@@ -1,1 +1,1 @@
-<text class="iconfont icon-{{ name }}" style="font-size: {{size}}px;" />
+<text class="iconfont icon-{{ name }}" style="font-size: {{size}}px;color: {{color}};" />

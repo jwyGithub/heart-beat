@@ -1,14 +1,15 @@
 {
-    "pages": ["pages/home/home", "pages/index/index", "pages/logs/logs"],
+    "pages": ["pages/home/home", "pages/travel/travel", "pages/logs/logs"],
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "",
+        "navigationBarTitleText": "江伟YE千宁",
         "navigationBarTextStyle": "black"
     },
     "usingComponents": {
         "icon": "./components/Icon/Icon",
-        "lazyImage": "./components/LazyImage/LazyImage"
+        "lazyImage": "./components/LazyImage/LazyImage",
+        "Calendar": "./components/Calendar/Calendar"
     },
     "renderer": "webview",
     "lazyCodeLoading": "requiredComponents",

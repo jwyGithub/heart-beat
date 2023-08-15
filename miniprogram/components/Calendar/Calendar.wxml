@@ -1,0 +1,37 @@
+<view class="_calendar">
+    <view class="calendar-header">
+        <view class="top">
+            <view class="top-left">
+                <text class="title">{{ headerDay }}</text>
+                <text class="title-2" style="margin-left: 20rpx">{{ headerWeek }}</text>
+            </view>
+            <view class="top-right">
+                <image src="/static/images/wether/sun.png" class="wether"></image>
+                <view class="top-right-text">
+                    <view class="text-one" style="margin-bottom: 10rpx">TODAY</view>
+                    <view class="text-two">{{ headerDate }}</view>
+                </view>
+            </view>
+        </view>
+        <view class="bottom"></view>
+    </view>
+    <view class="_container">
+        <view class="_container-header">
+            <image src="/components/Calendar/images/select.png" class="_ponient _left" bindtap="preMonth"></image>
+            <text class="_text">{{ nowYear }}年{{ nowMonth }}月</text>
+            <image src="/components/Calendar/images/select.png" class="_ponient" bindtap="nextMonth"></image>
+        </view>
+        <view class="_container-content">
+            <view class="_week">
+                <view class="_week-header" wx:for="{{ _weeks }}" wx:key="index">{{ item }}</view>
+            </view>
+            <view class="_days">
+                <view wx:for="{{ _days }}" wx:key="index" class="_day-text {{ nowDay == nowYear + '-' + nowMonth + '-' + item.date ? 'active' : '' }}" bindtap="changeDate" data-date="{{ item.date }}">
+
+                    <view class="_days-date" style="color:{{ item.isWeek }}">{{ item.date }}</view>
+                    <view class="_days-lunarday">{{ item.lunarday }}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

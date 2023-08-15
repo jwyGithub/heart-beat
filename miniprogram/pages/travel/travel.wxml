@@ -1,0 +1,13 @@
+<view class="travel">
+    <view class="travel-item" wx:for="{{ journeys }}" wx:key="index">
+        <!-- <view class="travel-item-date">{{ item.dateRange }}</view> -->
+        <view class="travel-item-content">
+            <journey-item
+                name="{{ item.name }}"
+                coverImage="{{ item.coverImage }}"
+                date="{{ item.date }}"
+                dateRange="{{ item.dateRange }}"
+            />
+        </view>
+    </view>
+</view>

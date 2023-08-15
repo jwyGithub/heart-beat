@@ -3,6 +3,8 @@ const photos = [];
 for (let i = 1; i <= 38; i++) {
     photos.push({
         src: `https://cdn.jsdelivr.net/gh/jwyGithub/images-github/heartbeat/${i}.jpeg`,
+        def:
+            "https://xui.vpsdomain.tk:20228/heartBeat/images/photo_loading.gif",
         content: "",
         date: "2023-06-21",
         show: false,

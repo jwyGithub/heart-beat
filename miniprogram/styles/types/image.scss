@@ -1,0 +1,15 @@
+@import '../variables.scss';
+
+// 背景图片基础样式
+@mixin bgImageBase() {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+// 背景图片
+@mixin backgroundImage($name) {
+    background-image: url(#{$image_serve}#{$name});
+    @include bgImageBase;
+}
+

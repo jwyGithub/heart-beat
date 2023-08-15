@@ -1,40 +1,28 @@
+<!-- <view class="full-page home">
+   
+</view> -->
 <view class="full-page home">
-
-
     <view class="page-content">
-
-        <view wx:show="{{activeTabIndex === 0}}" class="page-item" hidden="{{activeTabIndex !== 0}}">
+        <view wx:show="{{ activeTabIndex === 0 }}" class="page-item" hidden="{{ activeTabIndex !== 0 }}">
             <We></We>
         </view>
-
-        <view wx:show="{{activeTabIndex === 1}}" class="page-item" hidden="{{activeTabIndex !== 1}}">
+        <view wx:show="{{ activeTabIndex === 1 }}" class="page-item" hidden="{{ activeTabIndex !== 1 }}">
             <Photo></Photo>
         </view>
-
-        <view wx:show="{{activeTabIndex === 2}}" class="page-item" hidden="{{activeTabIndex !== 2}}">
+        <view wx:show="{{ activeTabIndex === 2 }}" class="page-item" hidden="{{ activeTabIndex !== 2 }}">
             <MemorialDay></MemorialDay>
         </view>
-
-
-
-        <!-- <view class="day-total">
-            <view>
-                <text>在一起</text>
-                <text style="color: red">{{ connectDay.days }}天</text>
-                <text style="color: red">{{ connectDay.hours }}时</text>
-                <text style="color: red">{{ connectDay.minutes }}分</text>
-                <text style="color: red">{{ connectDay.seconds }}秒</text>
-                <text>啦</text>
-            </view>
-        </view> -->
-
     </view>
 
     <view class="page-tabs">
         <view class="page-tabs_container">
-            <view class="page-tab {{ activeTabIndex === index ? 'active' : '' }}" wx:for="{{tabs}}" wx:key="index" bind:tap="onClickTab" data-index="{{index}}">
-                <icon name="{{item.icon}}"></icon>
-                <text class="page-tab_text">{{item.name}}</text>
+            <view class="page-tab {{ activeTabIndex === index ? 'active' : '' }}" wx:for="{{ tabs }}" wx:key="index" bind:tap="onClickTab" data-index="{{ index }}">
+                <view class="page-tab-item">
+                    <image src="{{ item.icon }}" mode="aspectFit" class="page-tab-item-icon" />
+                </view>
+                <!-- <icon name="{{item.icon}}" class="icon" color="#000"></icon> -->
+
+                <!-- <text class="page-tab_text">{{item.name}}</text> -->
             </view>
         </view>
     </view>

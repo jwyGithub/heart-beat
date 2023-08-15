@@ -18,7 +18,9 @@
             "outputPath": ""
         },
         "condition": false,
-        "minified": true
+        "minified": true,
+        "es6": true,
+        "enhance": true
     },
     "simulatorType": "wechat",
     "simulatorPluginLibVersion": {},
@@ -29,5 +31,6 @@
     "editorSetting": {
         "tabIndent": "insertSpaces",
         "tabSize": 4
-    }
+    },
+    "lazyCodeLoading": "requiredComponents"
 }

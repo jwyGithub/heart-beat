@@ -1,13 +1,4 @@
-@import "./assets/font/iconfont.scss";
-@import "./styles/mixins.scss";
+@import './assets/font/iconfont.scss';
+@import './assets/font/FangZheng-Simplified-Chinese.scss';
+@import './styles/mixins.scss';
 
-$avatar-width: 200rpx;
-$avatar-height: 200rpx;
-
-page {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}

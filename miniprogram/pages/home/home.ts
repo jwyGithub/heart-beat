@@ -4,23 +4,28 @@ Page({
      * 页面的初始数据
      */
     data: {
-        activeTabIndex: 1,
-
-        tabs: [
-            { name: "我们", icon: "duolaAmeng", type: "we", component: "We" },
-            {
-                name: "去玩吖",
-                icon: "duolaAmeng",
-                type: "photo",
-                component: "Photo",
-            },
-            {
-                name: "纪念日",
-                icon: "duolaAmeng",
-                type: "memorial-day",
-                component: "MemorialDay",
-            },
-        ],
+        activeTabIndex: 0,
+        tabs: [],
+        // tabs: [
+        //     {
+        //         name: '我们',
+        //         icon: '../../assets/images/home/we-transformed.png',
+        //         type: 'we',
+        //         component: 'We'
+        //     },
+        //     {
+        //         name: '去玩吖',
+        //         icon: '../../assets/images/home/we-transformed.png',
+        //         type: 'photo',
+        //         component: 'Photo'
+        //     }
+        //     // {
+        //     //     name: "纪念日",
+        //     //     icon: "duolaAmeng",
+        //     //     type: "memorial-day",
+        //     //     component: "MemorialDay",
+        //     // },
+        // ]
     },
 
     onClickTab(event: any) {
@@ -34,6 +39,10 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad() {
+        const config = wx.getStorageSync("config") || {};
+        this.setData({
+            tabs: config.tabs,
+        });
     },
 
     /**
