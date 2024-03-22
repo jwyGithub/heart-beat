@@ -1,3 +1,5 @@
+@import "./font.scss";
+
 // 全屏
 @mixin fullScreen() {
     width: 100vw;
@@ -6,6 +8,7 @@
     padding: 0;
     box-sizing: border-box;
     position: fixed;
+    @include fontNormal;
 }
 
 @mixin fullPage($w: 100%, $h: 100%) {

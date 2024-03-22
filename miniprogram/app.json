@@ -1,5 +1,10 @@
 {
-    "pages": ["pages/home/home", "pages/travel/travel", "pages/logs/logs"],
+    "pages": [
+        "pages/home/home",
+        "pages/travel/travel",
+        "pages/logs/logs",
+        "pages/marry/marry"
+    ],
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#fff",

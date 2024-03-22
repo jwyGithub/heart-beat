@@ -1,0 +1,24 @@
+@import "../../app.scss";
+
+.marry {
+    @include fullScreen;
+    @include safeArea;
+    background-image: linear-gradient(
+        to top,
+        rgba(#ecebef, 1) 0%,
+        rgba(255, 255, 255, 0.1) 100%
+    );
+    overflow: hidden;
+    &-container {
+        height: 90%;
+        &-item {
+            padding: 10rpx 0;
+            @include flex;
+            border-bottom: 1px solid #ecebef;
+        }
+    }
+
+    &-footer {
+        height: 10%;
+    }
+}

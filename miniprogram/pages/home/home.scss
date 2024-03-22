@@ -50,7 +50,7 @@
         .page-tabs_container {
             @include flex(space-around);
             width: 96%;
-            height: 90rpx;
+            height: 100rpx;
             border-radius: 60rpx;
             font-weight: bold;
             position: absolute;
@@ -63,23 +63,36 @@
 
             .page-tab {
                 @include flex;
-                height: 100%;
-                &-item {
-                    &-icon {
-                        width: 70rpx;
+                flex-direction: column;
+                height: 100rpx;
+                .page-tab-item {
+                    border-radius: 50%;
+                    .page-tab-item-icon {
+                        width: 40rpx;
+                        height: 40rpx;
                         transition: width 0.1s linear;
                         display: inline-block;
                         vertical-align: middle;
                     }
                 }
+                .page-tab-text {
+                    font-size: 24rpx;
+                    color: rgba($color: #000000, $alpha: 0.6);
+                    text-align: center;
+                }
                 &.active {
                     .page-tab-item {
                         border: 1px solid #f6e5e8;
-                        border-radius: 50%;
                         .page-tab-item-icon {
-                            width: 80rpx;
-                            height: 80rpx;
+                            width: 50rpx;
+                            height: 50rpx;
                         }
+                    }
+                    .page-tab-text {
+                        font-size: 26rpx;
+                        color: rgba($color: #0093f7, $alpha: 1);
+                        text-align: center;
+                        transition: font-size 0.1s linear;
                     }
                 }
             }

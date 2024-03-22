@@ -1,4 +1,4 @@
-@import '../../../../app.scss';
+@import "../../../../app.scss";
 .we {
     @include fullPage;
     @include flex;
@@ -9,8 +9,9 @@
     &-content {
         width: 100%;
         flex: 2.5;
-        background-image: url(#{$image_serve}we_bg_5.jpg);
+        background-image: url(#{$image_serve}/wedding/1.jpg);
         background-size: cover;
+        background-position: 30% center;
     }
 
     &-footer {
@@ -34,7 +35,7 @@
             &-left {
                 @include flex;
                 height: 100%;
-                width: 57%;
+                width: 40%;
                 padding: 0 10rpx;
                 box-sizing: border-box;
                 &-people {
@@ -43,13 +44,10 @@
                     border-radius: 50%;
                     border: 10rpx solid #f6e5e8;
                 }
-                &-icon {
-                    margin: 0 20rpx;
-                }
             }
 
             &-right {
-                width: 43%;
+                width: 60%;
                 padding: 30rpx 0;
                 &-days {
                     line-height: 90rpx;
@@ -84,4 +82,3 @@
         }
     }
 }
-

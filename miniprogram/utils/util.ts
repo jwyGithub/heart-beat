@@ -1,2 +1,1 @@
-export { formatTime, diffTime } from './date';
-
+export { diffTime } from "./date";

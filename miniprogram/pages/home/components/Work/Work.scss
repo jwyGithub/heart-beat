@@ -1,0 +1,16 @@
+@import "../../../../app.scss";
+.work {
+    @include fullPage;
+    @include fontNormal;
+    padding: 20rpx;
+    gap: 20rpx;
+
+    &-item {
+        width: calc(100% / 3);
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+        height: 200rpx;
+        text-align: center;
+        line-height: 200rpx;
+        border-radius: 20rpx;
+    }
+}

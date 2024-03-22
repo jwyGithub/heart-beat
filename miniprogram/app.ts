@@ -15,12 +15,12 @@ App<IAppOption>({
         //     }
         // });
 
-        wx.request({
-            url: "https://xui.vpsdomain.tk:20228/heartBeat/config/config.json",
-            success: (res) => {
-                const data = res.data;
-                wx.setStorageSync("config", data);
-            },
-        });
+        // wx.request({
+        //     url: "https://xui.vpsdomain.tk:20228/heartBeat/config/config.json",
+        //     success: (res) => {
+        //         const data = res.data;
+        //         wx.setStorageSync("config", data);
+        //     },
+        // });
     },
 });

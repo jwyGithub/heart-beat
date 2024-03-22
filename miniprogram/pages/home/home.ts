@@ -5,27 +5,14 @@ Page({
      */
     data: {
         activeTabIndex: 0,
-        tabs: [],
-        // tabs: [
-        //     {
-        //         name: '我们',
-        //         icon: '../../assets/images/home/we-transformed.png',
-        //         type: 'we',
-        //         component: 'We'
-        //     },
-        //     {
-        //         name: '去玩吖',
-        //         icon: '../../assets/images/home/we-transformed.png',
-        //         type: 'photo',
-        //         component: 'Photo'
-        //     }
-        //     // {
-        //     //     name: "纪念日",
-        //     //     icon: "duolaAmeng",
-        //     //     type: "memorial-day",
-        //     //     component: "MemorialDay",
-        //     // },
-        // ]
+        tabs: [
+            {
+                name: "我们",
+                icon: "../../assets/images/home/we-transformed.png",
+                type: "we",
+                component: "We",
+            },
+        ],
     },
 
     onClickTab(event: any) {
@@ -38,12 +25,7 @@ Page({
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad() {
-        const config = wx.getStorageSync("config") || {};
-        this.setData({
-            tabs: config.tabs,
-        });
-    },
+    onLoad() {},
 
     /**
      * 生命周期函数--监听页面初次渲染完成

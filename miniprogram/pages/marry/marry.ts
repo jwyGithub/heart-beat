@@ -1,10 +1,11 @@
-// pages/travel/travel.ts
+// pages/marry/marry.ts
 Page({
     /**
      * 页面的初始数据
      */
     data: {
-       
+        list: [{ label: "总金额", value: 310000 }],
+        balance: 0,
     },
 
     /**

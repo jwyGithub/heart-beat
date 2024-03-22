@@ -16,6 +16,7 @@ Component({
             "yyyy年MM月dd日"
         ),
         be_together: { day: 0, hour: 0, min: 0, sec: 0 },
+        be_marry: { day: 0, hour: 0, min: 0, sec: 0 },
 
         tools: [
             {
@@ -58,12 +59,21 @@ Component({
             const withDate = new Date(DateRecord.LOVE_DATE);
             const withDay = diffTime(withDate, nowDate);
 
+            const marryDate = new Date(DateRecord.MARRIAGE_DATE);
+            const marryDay = diffTime(marryDate, nowDate);
+
             this.setData({
                 be_together: {
                     day: withDay.days,
                     hour: withDay.hours,
                     min: withDay.minutes,
                     sec: withDay.seconds,
+                },
+                be_marry: {
+                    day: marryDay.days,
+                    hour: marryDay.hours,
+                    min: marryDay.minutes,
+                    sec: marryDay.seconds,
                 },
             });
         },
@@ -75,6 +85,12 @@ Component({
                     url: toPage,
                 });
             }
+        },
+
+        toMarry() {
+            wx.navigateTo({
+                url: "../../pages/marry/marry",
+            });
         },
     },
 });

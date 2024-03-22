@@ -1,17 +1,15 @@
-<!-- <view class="full-page home">
-   
-</view> -->
 <view class="full-page home">
     <view class="page-content">
         <view wx:show="{{ activeTabIndex === 0 }}" class="page-item" hidden="{{ activeTabIndex !== 0 }}">
             <We></We>
         </view>
         <view wx:show="{{ activeTabIndex === 1 }}" class="page-item" hidden="{{ activeTabIndex !== 1 }}">
-            <Photo></Photo>
+            <Work></Work>
         </view>
         <view wx:show="{{ activeTabIndex === 2 }}" class="page-item" hidden="{{ activeTabIndex !== 2 }}">
-            <MemorialDay></MemorialDay>
+            <Coupon></Coupon>
         </view>
+
     </view>
 
     <view class="page-tabs">
@@ -20,9 +18,7 @@
                 <view class="page-tab-item">
                     <image src="{{ item.icon }}" mode="aspectFit" class="page-tab-item-icon" />
                 </view>
-                <!-- <icon name="{{item.icon}}" class="icon" color="#000"></icon> -->
-
-                <!-- <text class="page-tab_text">{{item.name}}</text> -->
+                <text class="page-tab-text">{{item.name}}</text>
             </view>
         </view>
     </view>

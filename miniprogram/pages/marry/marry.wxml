@@ -1,0 +1,14 @@
+<view class="full-page marry">
+    <view class='marry-container'>
+        <view wx:for="{{ list }}" wx:key="index" data-item="{{ item }}" class="marry-container-item">
+            <text class="marry-container-item-label">{{item.label}}：</text>
+            <input class="marry-container-item-value" bindinput="bindKeyInput" value="{{item.value}}" />
+        </view>
+    </view>
+    <view class='marry-footer'>
+        <view class="marry-footer-balance">
+            <view>剩余：{{balance}}</view>
+        </view>
+        <button type="primary" plain="true" bind:tap="onAdd">添加</button>
+    </view>
+</view>
